@@ -1,0 +1,19 @@
+<div>
+	<a routerLink="/movies" type="button" class="btn btn-primary">Back</a>
+	<br>
+	<br>
+<div class="img-rounded">
+	<img src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" alt="image" width="1100" height="400">
+	<div>
+		<h4>
+		<a routerLink="/movie/{{movie.id}}" title="{{movie.original_title}}">{{movie.original_title}}</a>
+	    </h4>
+	    
+	</div>
+    
+</div>
+<div>
+<h1>Overview</h1>
+<a routerLink="/movie/{{movie.overview}}" title="movie.overview">{{movie.overview}}</a>
+</div>
+</div>
