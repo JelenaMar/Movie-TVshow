@@ -1,16 +1,16 @@
-<div >
+<div>
 	<a routerLink="/tv" type="button" class="btn btn-primary">Back</a>
 	<br>
 	<br>
-<div>
-	<img src="https://image.tmdb.org/t/p/w300/{{tvshow.poster_path}}" alt="image" width="1100" height="400">
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" [src]="video.url"></iframe>
 	<div>
 		<h4>
-		<a routerLink="/tv/{{tvshow.id}}" title="{{tvshow.title}}">{{tvshow.title}}</a>
+		<p>{{tvshow.title}}</p>
 	    </h4>
 	    <br>
 	    <h1>Overview</h1>
-	    <a routerLink="tv/{{tvshow.overview}}" title="{{tvshow.overview}}">{{tvshow.overview}}</a>
+	    <p>{{tvshow.overview}}</p>
 	</div>
 
 </div>

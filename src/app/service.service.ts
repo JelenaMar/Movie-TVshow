@@ -64,5 +64,22 @@ export class ServiceService {
 	    })
 	    );		
 	}
+	getMovieVideos(id:string) {
+    var search = new URLSearchParams();
+    search.set('api_key', this.apikey);
+    return this._jsonp.get('https://api.themoviedb.org/3/movie/'+ id +'/videos?callback=JSONP_CALLBACK', {search}).pipe(map(res => {
+        return res.json();
+      })
+      );
+
+  }
+  getTvShowVideos(id:string) {
+    var search = new URLSearchParams();
+    search.set('api_key', this.apikey);
+    return this._jsonp.get('https://api.themoviedb.org/3/tv/'+ id +'/videos?callback=JSONP_CALLBACK', {search}).pipe(map(res => {
+        return res.json();
+      })
+      );
+}
 }
 
