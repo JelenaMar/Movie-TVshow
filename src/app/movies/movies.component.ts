@@ -13,7 +13,7 @@ export class MoviesComponent implements OnInit {
 	searchStr: string;
 
   constructor(private _moviseService: ServiceService) {
-     this._moviseService.getPopularMovies().subscribe(res => {
+     this._moviseService.getTopRatedMovies().subscribe(res => {
      	this.popular = res.results.slice(0,10);
      });
  }

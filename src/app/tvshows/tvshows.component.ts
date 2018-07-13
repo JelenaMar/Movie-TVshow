@@ -13,7 +13,7 @@ export class TvshowsComponent implements OnInit {
   searchRes: Array<Object>;
 
   constructor(private _moviseService: ServiceService) { 
-    this._moviseService.getPopularTVShows().subscribe(res => {
+    this._moviseService.getTopRatedTVShows().subscribe(res => {
     	this.tvshows = res.results.slice(0,10);
     });
 }

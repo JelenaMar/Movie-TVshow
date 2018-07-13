@@ -9,11 +9,11 @@ export class ServiceService {
 	constructor(private _jsonp:Jsonp){
 		this.apikey = 'c9e3ae2993bc6c62de85e0db3fecb02f';
 	}
-	getPopularMovies(){
+	getTopRatedMovies(){
 		var search = new URLSearchParams ();
 		search.set('sort_by','popularity.desc');
 		search.set('api_key',this.apikey);
-		return this._jsonp.get('https://api.themoviedb.org/3/discover/movie?callback=JSONP_CALLBACK',{search}).pipe(map(res => { return res.json();
+		return this._jsonp.get('https://api.themoviedb.org/3/movie/top_rated?callback=JSONP_CALLBACK',{search}).pipe(map(res => { return res.json();
 		})
 	  );
 	}
@@ -37,10 +37,10 @@ export class ServiceService {
 	}
 
 
-	getPopularTVShows(){
+	getTopRatedTVShows(){
 		var search = new URLSearchParams();
 		search.set('api_key',this.apikey);
-		return this._jsonp.get('https://api.themoviedb.org/3/tv/popular?callback=JSONP_CALLBACK', {search}).pipe(map(res => {return res.json();
+		return this._jsonp.get('https://api.themoviedb.org/3/tv/top_rated?callback=JSONP_CALLBACK', {search}).pipe(map(res => {return res.json();
 		})
 		);
 	}
