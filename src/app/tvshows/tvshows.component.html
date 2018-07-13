@@ -1,4 +1,5 @@
 <div>
+	<br>
 	<div class="btn-group">
        <a routerLink="/movies" type="button" class="btn btn-primary">Movies</a>
        <button class="btn btn-primary">TVShows</button>
@@ -6,7 +7,7 @@
 	<br>
 	<div class="form-group">
 		<label for="tvshow"></label>
-		<input type="text" class="form-control" id="tvshow" placeholder="search" [(ngModel)]="searchStr" name="searchStr" minlength="3" (keyup)="searchTVShows()">
+		<input type="text" class="form-control glyphicon" id="tvshow" placeholder="&#xe003; search TV shows" [(ngModel)]="searchStr" name="searchStr" minlength="3" (keyup)="searchTVShows()">
 	</div>
 	<div *ngIf="searchRes">
 		<div class="col-lg-6" *ngFor="let tvshow of searchRes">

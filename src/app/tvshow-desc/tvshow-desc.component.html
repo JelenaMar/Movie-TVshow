@@ -3,14 +3,10 @@
 	<br>
 	<br>
 <div>
-	<img src="https://image.tmdb.org/t/p/w300/{{tvshow.poster_path}}" alt="image">
-	<div>
-		<h4>
-		<a routerLink="/tv/{{tvshow.id}}" title="{{tvshow.name}}">{{tvshow.name}}</a>
-	    </h4>
-	    
-	</div>
-
+    <h2>
+	<a routerLink="/tv/{{tvshow.id}}" title="{{tvshow.name}}">
+		<img src="https://image.tmdb.org/t/p/w300/{{tvshow.poster_path}}" alt="image"><br>{{tvshow.name}}</a>
+	    </h2>
 </div>
 </div>
 

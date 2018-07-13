@@ -1,12 +1,13 @@
 <div>
+	<br>
 	<div class="btn-group">
        <button class="btn btn-primary" type="button">Movies</button>
         <a routerLink="/tv" type="button" class="btn btn-primary">TVShows</a>
 	</div>
 	<br>
 	<div class="form-group">
-		<label for="Movies"></label>
-		<input type="text" class="form-control" id="Movies" placeholder="search" [(ngModel)]="searchStr" name="searchStr" minlength="3" (keyup)="searchMovies()">
+        <label for="Movies"></label>
+		<input type="search" class="form-control glyphicon" id="Movies" placeholder="&#xe003; search movie" [(ngModel)]="searchStr" name="searchStr" minlength="3" (keyup)="searchMovies()"/>
 	</div>
 	<div *ngIf="searchRes">
 		<div class="col-lg-6" *ngFor="let movie of searchRes; let i =index; ">
